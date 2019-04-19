@@ -1,6 +1,6 @@
 ﻿namespace TT.UI
 {
-    partial class TypingTest
+    partial class typingTest
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox = new System.Windows.Forms.TextBox();
             this.sampleText = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.instruction = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Label();
             this.wordCountLabel = new System.Windows.Forms.Label();
             this.wordCount = new System.Windows.Forms.Label();
+            this.resetBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,21 @@
             this.panel1.Size = new System.Drawing.Size(398, 117);
             this.panel1.TabIndex = 0;
             // 
+            // sampleText
+            // 
+            this.sampleText.BackColor = System.Drawing.SystemColors.Control;
+            this.sampleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sampleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.sampleText.Location = new System.Drawing.Point(3, 4);
+            this.sampleText.Multiline = true;
+            this.sampleText.Name = "sampleText";
+            this.sampleText.ReadOnly = true;
+            this.sampleText.ShortcutsEnabled = false;
+            this.sampleText.Size = new System.Drawing.Size(393, 106);
+            this.sampleText.TabIndex = 0;
+            this.sampleText.Text = "As long as you keep going, you\'ll keep getting better. And as you get better, you" +
+    " gain more confidence. That alone is success.";
+            // 
             // textBox
             // 
             this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -56,26 +72,13 @@
             this.textBox.Size = new System.Drawing.Size(398, 131);
             this.textBox.TabIndex = 1;
             // 
-            // sampleText
-            // 
-            this.sampleText.BackColor = System.Drawing.SystemColors.Control;
-            this.sampleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.sampleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sampleText.Location = new System.Drawing.Point(3, 4);
-            this.sampleText.Multiline = true;
-            this.sampleText.Name = "sampleText";
-            this.sampleText.ShortcutsEnabled = false;
-            this.sampleText.Size = new System.Drawing.Size(403, 106);
-            this.sampleText.TabIndex = 0;
-            this.sampleText.Text = "As long as you keep going, you\'ll keep getting better. And as you get better, you" +
-    " gain more confidence. That alone is success.";
-            // 
             // instruction
             // 
             this.instruction.AutoSize = true;
-            this.instruction.Location = new System.Drawing.Point(444, 35);
+            this.instruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.instruction.Location = new System.Drawing.Point(434, 41);
             this.instruction.Name = "instruction";
-            this.instruction.Size = new System.Drawing.Size(177, 13);
+            this.instruction.Size = new System.Drawing.Size(202, 15);
             this.instruction.TabIndex = 2;
             this.instruction.Text = "Start typing sample text to begin test";
             // 
@@ -103,25 +106,36 @@
             // 
             this.wordCount.AutoSize = true;
             this.wordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wordCount.Location = new System.Drawing.Point(505, 160);
+            this.wordCount.Location = new System.Drawing.Point(513, 160);
             this.wordCount.Name = "wordCount";
             this.wordCount.Size = new System.Drawing.Size(36, 26);
             this.wordCount.TabIndex = 5;
             this.wordCount.Text = "00";
             // 
-            // Form1
+            // resetBtn
+            // 
+            this.resetBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.resetBtn.Location = new System.Drawing.Point(546, 257);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(75, 32);
+            this.resetBtn.TabIndex = 1;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.UseVisualStyleBackColor = true;
+            // 
+            // typingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 301);
+            this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.wordCount);
             this.Controls.Add(this.wordCountLabel);
             this.Controls.Add(this.timer);
             this.Controls.Add(this.instruction);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "typingTest";
+            this.Text = "Typing Test";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -138,6 +152,7 @@
         private System.Windows.Forms.Label timer;
         private System.Windows.Forms.Label wordCountLabel;
         private System.Windows.Forms.Label wordCount;
+        private System.Windows.Forms.Button resetBtn;
     }
 }
 

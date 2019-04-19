@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TT.UI
 {
-    public partial class TypingTest : Form
+    public partial class typingTest : Form
     {
-        public TypingTest()
+        public typingTest()
         {
             InitializeComponent();
         }
