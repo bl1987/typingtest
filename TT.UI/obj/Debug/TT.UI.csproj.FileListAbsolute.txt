@@ -18,3 +18,6 @@ D:\git\typingtest\TT.UI\obj\Debug\TT.UI.csproj.GenerateResource.cache
 D:\git\typingtest\TT.UI\obj\Debug\TT.UI.csproj.CoreCompileInputs.cache
 D:\git\typingtest\TT.UI\obj\Debug\TT.UI.exe
 D:\git\typingtest\TT.UI\obj\Debug\TT.UI.pdb
+D:\git\typingtest\TT.UI\bin\Debug\TT.BL.dll
+D:\git\typingtest\TT.UI\bin\Debug\TT.BL.pdb
+D:\git\typingtest\TT.UI\obj\Debug\TT.UI.csproj.CopyComplete

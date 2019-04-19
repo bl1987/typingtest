@@ -1,0 +1,6 @@
+D:\git\typingtest\TT.BL\bin\Debug\TT.BL.dll
+D:\git\typingtest\TT.BL\bin\Debug\TT.BL.pdb
+D:\git\typingtest\TT.BL\obj\Debug\TT.BL.csprojAssemblyReference.cache
+D:\git\typingtest\TT.BL\obj\Debug\TT.BL.csproj.CoreCompileInputs.cache
+D:\git\typingtest\TT.BL\obj\Debug\TT.BL.dll
+D:\git\typingtest\TT.BL\obj\Debug\TT.BL.pdb

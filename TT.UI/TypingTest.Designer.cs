@@ -36,6 +36,7 @@
             this.wordCountLabel = new System.Windows.Forms.Label();
             this.wordCount = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
+            this.sampleTextLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,16 +51,21 @@
             // 
             // sampleText
             // 
+            this.sampleText.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.sampleText.BackColor = System.Drawing.SystemColors.Control;
             this.sampleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sampleText.CausesValidation = false;
+            this.sampleText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.sampleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.sampleText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.sampleText.Location = new System.Drawing.Point(3, 4);
             this.sampleText.Multiline = true;
             this.sampleText.Name = "sampleText";
             this.sampleText.ReadOnly = true;
             this.sampleText.ShortcutsEnabled = false;
             this.sampleText.Size = new System.Drawing.Size(393, 106);
-            this.sampleText.TabIndex = 0;
+            this.sampleText.TabIndex = 1;
+            this.sampleText.TabStop = false;
             this.sampleText.Text = "As long as you keep going, you\'ll keep getting better. And as you get better, you" +
     " gain more confidence. That alone is success.";
             // 
@@ -70,7 +76,7 @@
             this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(398, 131);
-            this.textBox.TabIndex = 1;
+            this.textBox.TabIndex = 0;
             // 
             // instruction
             // 
@@ -122,11 +128,21 @@
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
             // 
+            // sampleTextLabel
+            // 
+            this.sampleTextLabel.AutoSize = true;
+            this.sampleTextLabel.Location = new System.Drawing.Point(12, 19);
+            this.sampleTextLabel.Name = "sampleTextLabel";
+            this.sampleTextLabel.Size = new System.Drawing.Size(66, 13);
+            this.sampleTextLabel.TabIndex = 6;
+            this.sampleTextLabel.Text = "Sample Text";
+            // 
             // typingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 301);
+            this.Controls.Add(this.sampleTextLabel);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.wordCount);
             this.Controls.Add(this.wordCountLabel);
@@ -153,6 +169,7 @@
         private System.Windows.Forms.Label wordCountLabel;
         private System.Windows.Forms.Label wordCount;
         private System.Windows.Forms.Button resetBtn;
+        private System.Windows.Forms.Label sampleTextLabel;
     }
 }
 
