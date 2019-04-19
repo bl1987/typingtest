@@ -7,6 +7,7 @@ using System.Diagnostics;
 
 namespace TT.BL
 {
+    //Stopwatch object to be used throughout the application
     public static class MyTimer
     {
         public static Stopwatch watch = new Stopwatch();

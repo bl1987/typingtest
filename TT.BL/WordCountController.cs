@@ -10,7 +10,7 @@ namespace TT.BL
     public class WordCountController
     {
         //Spliting text from textBox by ' ', '\r', '\n' and returning the length of words array
-        public static int GetWordCount(TextBox text)
+        public static int GetWordCount(RichTextBox text)
         {
             char[] delimiters = new char[] { ' ', '\r', '\n' };
             string typedText = text.Text;
@@ -19,24 +19,10 @@ namespace TT.BL
         }
 
         //inserting the word count from GetWordCount to wordCount label
-        public static void UpdateWordCount(TextBox text, Label wordCount)
+        public static void UpdateWordCount(RichTextBox text, Label wordCount)
         {
             int count = GetWordCount(text);
             wordCount.Text = count.ToString();
-        }
-
-        public static string CalWordPerMin(TextBox text)
-        {
-            int count = GetWordCount(text);
-            int minute = 60000;
-            int time = (int)MyTimer.watch.ElapsedMilliseconds;
-            return (count * minute / time).ToString();
-        }
-
-        public static void UpdateWordPerMin(TextBox text, Label wpm)
-        {
-            wpm.Text = CalWordPerMin(text);
-            wpm.Visible = true;
         }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sampleText = new System.Windows.Forms.TextBox();
-            this.textBox = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.RichTextBox();
             this.instruction = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Label();
             this.wordCountLabel = new System.Windows.Forms.Label();
@@ -41,6 +41,7 @@
             this.time = new System.Windows.Forms.Timer(this.components);
             this.wordPerMinLabel = new System.Windows.Forms.Label();
             this.wordPerMin = new System.Windows.Forms.Label();
+            this.accuracy = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +60,7 @@
             this.sampleText.BackColor = System.Drawing.SystemColors.Control;
             this.sampleText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sampleText.CausesValidation = false;
-            this.sampleText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sampleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.sampleText.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sampleText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.sampleText.Location = new System.Drawing.Point(3, 4);
             this.sampleText.Multiline = true;
@@ -75,12 +75,13 @@
             // 
             // textBox
             // 
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox.Location = new System.Drawing.Point(13, 158);
-            this.textBox.Multiline = true;
             this.textBox.Name = "textBox";
+            this.textBox.ShortcutsEnabled = false;
             this.textBox.Size = new System.Drawing.Size(398, 131);
             this.textBox.TabIndex = 0;
+            this.textBox.Text = "";
             this.textBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // instruction
@@ -156,6 +157,7 @@
             this.wordPerMinLabel.Size = new System.Drawing.Size(135, 20);
             this.wordPerMinLabel.TabIndex = 7;
             this.wordPerMinLabel.Text = "Word Per Minute :";
+            this.wordPerMinLabel.Visible = false;
             // 
             // wordPerMin
             // 
@@ -163,16 +165,28 @@
             this.wordPerMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.wordPerMin.Location = new System.Drawing.Point(513, 184);
             this.wordPerMin.Name = "wordPerMin";
-            this.wordPerMin.Size = new System.Drawing.Size(70, 26);
+            this.wordPerMin.Size = new System.Drawing.Size(36, 26);
             this.wordPerMin.TabIndex = 8;
-            this.wordPerMin.Text = "label1";
+            this.wordPerMin.Text = "00";
             this.wordPerMin.Visible = false;
+            // 
+            // accuracy
+            // 
+            this.accuracy.AutoSize = true;
+            this.accuracy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.accuracy.Location = new System.Drawing.Point(432, 212);
+            this.accuracy.Name = "accuracy";
+            this.accuracy.Size = new System.Drawing.Size(194, 26);
+            this.accuracy.TabIndex = 9;
+            this.accuracy.Text = "Accuracy : 100.0%";
+            this.accuracy.Visible = false;
             // 
             // TypingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 301);
+            this.Controls.Add(this.accuracy);
             this.Controls.Add(this.wordPerMin);
             this.Controls.Add(this.wordPerMinLabel);
             this.Controls.Add(this.sampleTextLabel);
@@ -195,7 +209,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.RichTextBox textBox;
         private System.Windows.Forms.TextBox sampleText;
         private System.Windows.Forms.Label instruction;
         private System.Windows.Forms.Label timer;
@@ -206,6 +220,7 @@
         private System.Windows.Forms.Timer time;
         private System.Windows.Forms.Label wordPerMinLabel;
         private System.Windows.Forms.Label wordPerMin;
+        private System.Windows.Forms.Label accuracy;
     }
 }
 
