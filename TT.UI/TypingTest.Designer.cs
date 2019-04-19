@@ -1,6 +1,6 @@
 ﻿namespace TT.UI
 {
-    partial class typingTest
+    partial class TypingTest
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sampleText = new System.Windows.Forms.TextBox();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -37,6 +38,9 @@
             this.wordCount = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
             this.sampleTextLabel = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Timer(this.components);
+            this.wordPerMinLabel = new System.Windows.Forms.Label();
+            this.wordPerMin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +81,7 @@
             this.textBox.Name = "textBox";
             this.textBox.Size = new System.Drawing.Size(398, 131);
             this.textBox.TabIndex = 0;
+            this.textBox.TextChanged += new System.EventHandler(this.TextBox_TextChanged);
             // 
             // instruction
             // 
@@ -92,17 +97,17 @@
             // 
             this.timer.AutoSize = true;
             this.timer.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.timer.Location = new System.Drawing.Point(430, 73);
+            this.timer.Location = new System.Drawing.Point(452, 67);
             this.timer.Name = "timer";
-            this.timer.Size = new System.Drawing.Size(206, 37);
+            this.timer.Size = new System.Drawing.Size(161, 37);
             this.timer.TabIndex = 3;
-            this.timer.Text = "00:00:00.000";
+            this.timer.Text = "00:00.000";
             // 
             // wordCountLabel
             // 
             this.wordCountLabel.AutoSize = true;
             this.wordCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wordCountLabel.Location = new System.Drawing.Point(479, 132);
+            this.wordCountLabel.Location = new System.Drawing.Point(482, 111);
             this.wordCountLabel.Name = "wordCountLabel";
             this.wordCountLabel.Size = new System.Drawing.Size(102, 20);
             this.wordCountLabel.TabIndex = 4;
@@ -112,7 +117,7 @@
             // 
             this.wordCount.AutoSize = true;
             this.wordCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.wordCount.Location = new System.Drawing.Point(513, 160);
+            this.wordCount.Location = new System.Drawing.Point(513, 131);
             this.wordCount.Name = "wordCount";
             this.wordCount.Size = new System.Drawing.Size(36, 26);
             this.wordCount.TabIndex = 5;
@@ -127,6 +132,7 @@
             this.resetBtn.TabIndex = 1;
             this.resetBtn.Text = "Reset";
             this.resetBtn.UseVisualStyleBackColor = true;
+            this.resetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // sampleTextLabel
             // 
@@ -137,11 +143,38 @@
             this.sampleTextLabel.TabIndex = 6;
             this.sampleTextLabel.Text = "Sample Text";
             // 
-            // typingTest
+            // time
+            // 
+            this.time.Tick += new System.EventHandler(this.Time_Tick);
+            // 
+            // wordPerMinLabel
+            // 
+            this.wordPerMinLabel.AutoSize = true;
+            this.wordPerMinLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wordPerMinLabel.Location = new System.Drawing.Point(464, 164);
+            this.wordPerMinLabel.Name = "wordPerMinLabel";
+            this.wordPerMinLabel.Size = new System.Drawing.Size(135, 20);
+            this.wordPerMinLabel.TabIndex = 7;
+            this.wordPerMinLabel.Text = "Word Per Minute :";
+            // 
+            // wordPerMin
+            // 
+            this.wordPerMin.AutoSize = true;
+            this.wordPerMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.wordPerMin.Location = new System.Drawing.Point(513, 184);
+            this.wordPerMin.Name = "wordPerMin";
+            this.wordPerMin.Size = new System.Drawing.Size(70, 26);
+            this.wordPerMin.TabIndex = 8;
+            this.wordPerMin.Text = "label1";
+            this.wordPerMin.Visible = false;
+            // 
+            // TypingTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 301);
+            this.Controls.Add(this.wordPerMin);
+            this.Controls.Add(this.wordPerMinLabel);
             this.Controls.Add(this.sampleTextLabel);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.wordCount);
@@ -150,7 +183,7 @@
             this.Controls.Add(this.instruction);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.panel1);
-            this.Name = "typingTest";
+            this.Name = "TypingTest";
             this.Text = "Typing Test";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -170,6 +203,9 @@
         private System.Windows.Forms.Label wordCount;
         private System.Windows.Forms.Button resetBtn;
         private System.Windows.Forms.Label sampleTextLabel;
+        private System.Windows.Forms.Timer time;
+        private System.Windows.Forms.Label wordPerMinLabel;
+        private System.Windows.Forms.Label wordPerMin;
     }
 }
 

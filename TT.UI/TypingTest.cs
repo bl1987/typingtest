@@ -7,14 +7,58 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TT.BL;
 
 namespace TT.UI
 {
-    public partial class typingTest : Form
+    public partial class TypingTest : Form
     {
-        public typingTest()
+        bool reset = false;
+        public TypingTest()
         {
             InitializeComponent();
+            TimerController.UpdateTimer(timer);
+        }
+
+        //Detect when ever user type something in textBox. 
+        //Trigger timer when it is not running
+        //Stops the timer and disable textBox when length of textBox is same as length of sampleText
+        //Disables textBox when user is done typing
+        private void TextBox_TextChanged(object sender, EventArgs e)
+        {
+            WordCountController.UpdateWordCount(textBox, wordCount);
+            if (reset)
+            {
+                reset = false;
+                return;
+            }
+            else
+            {
+                if (!MyTimer.watch.IsRunning)
+                {
+                    TimerController.StartTimer(time);
+                }
+                if (textBox.Text.Length == sampleText.Text.Length)
+                {
+                    TimerController.StopTimer(time);
+                    textBox.Enabled = false;
+                    WordCountController.UpdateWordPerMin(textBox, wordPerMin);
+                }
+            }
+        }
+
+        private void Time_Tick(object sender, EventArgs e)
+        {
+            TimerController.UpdateTimer(timer);
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            TimerController.ResetTimer(time);
+            textBox.Clear();
+            textBox.Enabled = true;
+            reset = true;
+            wordPerMin.Visible = false;
         }
     }
 }

@@ -16,7 +16,7 @@ namespace TT.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new typingTest());
+            Application.Run(new TypingTest());
         }
     }
 }
