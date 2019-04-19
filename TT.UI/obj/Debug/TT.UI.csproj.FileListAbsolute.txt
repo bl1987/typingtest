@@ -1,0 +1,10 @@
+D:\git\TypingTest\Typing Test\TT.UI\bin\Debug\TT.UI.exe.config
+D:\git\TypingTest\Typing Test\TT.UI\bin\Debug\TT.UI.exe
+D:\git\TypingTest\Typing Test\TT.UI\bin\Debug\TT.UI.pdb
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.csprojAssemblyReference.cache
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.Form1.resources
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.Properties.Resources.resources
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.csproj.GenerateResource.cache
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.csproj.CoreCompileInputs.cache
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.exe
+D:\git\TypingTest\Typing Test\TT.UI\obj\Debug\TT.UI.pdb
